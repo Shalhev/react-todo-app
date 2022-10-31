@@ -1,12 +1,15 @@
 import { TaskPreview } from './TaskPreview'
 
-export function TaskList({ tasks }) {
+export function TaskList({ tasks, onRemoveTask }) {
 
     return (
         <div className="task-list">
-            <ul>
-                {tasks.map(task => <TaskPreview task={task} />)}
-            </ul>
+            {tasks.map(task =>
+                <TaskPreview
+                    task={task}
+                    key={task.id}
+                    onRemoveTask={onRemoveTask}
+                />)}
         </div>
     )
 }

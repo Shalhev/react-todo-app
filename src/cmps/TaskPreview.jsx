@@ -1,7 +1,9 @@
-export function TaskPreview({ task }) {
+export function TaskPreview({ task, onRemoveTask, onCompleteTask }) {
     return (
-        <li>
-            {task}
-        </li>
+        <p className="task-preview">
+            <input type="checkbox" defaultChecked={task.isComplete} onChange={() => task.isComplete = !task.isComplete} />
+            {task.txt}
+            < button onClick={() => onRemoveTask(task.id)}>X</button>
+        </p>
     )
 }
