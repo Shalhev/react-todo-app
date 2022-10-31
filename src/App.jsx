@@ -44,13 +44,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <AppHeader />
-        To Do App
       </header>
-      <input type="text" onChange={handleChange} value={newTask} />
+      <input type="text" onChange={handleChange} value={newTask} placeholder='Create a new todo..' />
       <button onClick={() => addTask()} >Add</button>
       <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} />
 
-      <ul>
+      <ul className='clean-list flex justify-center filterby'>
         <li onClick={() => setFilterBy('all')}>All</li>
         <li onClick={() => setFilterBy('active')}>Active</li>
         <li onClick={() => setFilterBy('complete')}>Complete</li>

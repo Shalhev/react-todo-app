@@ -1,1 +1,6 @@
-@import './basics/base'
+@import './basics/base';
+@import './basics/helpers';
+
+@import './cmps/app-header';
+@import './cmps/task-list';
+@import './cmps/task-preview';
