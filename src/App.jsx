@@ -1,4 +1,4 @@
-import './App.css';
+import './scss/styles.scss'
 import { useState } from 'react';
 import { AppHeader } from './cmps/AppHeader';
 import { TaskList } from './cmps/TaskList'
@@ -6,6 +6,7 @@ import { TaskList } from './cmps/TaskList'
 function App() {
   const [taskList, setTaskList] = useState([])
   const [newTask, setNewTask] = useState('');
+  const [filterBy, setFilterBy] = useState('all');
 
   const handleChange = ({ target }) => {
     setNewTask(target.value)
@@ -26,6 +27,17 @@ function App() {
     const tasks = taskList.filter(task => task.id !== taskId)
     setTaskList([...tasks])
   }
+  const tasksToShow = () => {
+    // console.log('filterBy', filterBy);
+    let tasks = taskList
+    if (filterBy === 'complete') {
+      tasks = taskList.filter(task => task.isComplete)
+    }
+    else if (filterBy === 'active') {
+      tasks = taskList.filter(task => !task.isComplete)
+    }
+    return tasks
+  }
 
 
   return (
@@ -36,7 +48,13 @@ function App() {
       </header>
       <input type="text" onChange={handleChange} value={newTask} />
       <button onClick={() => addTask()} >Add</button>
-      <TaskList tasks={taskList} onRemoveTask={onRemoveTask} />
+      <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} />
+
+      <ul>
+        <li onClick={() => setFilterBy('all')}>All</li>
+        <li onClick={() => setFilterBy('active')}>Active</li>
+        <li onClick={() => setFilterBy('complete')}>Complete</li>
+      </ul>
 
     </div>
   );
