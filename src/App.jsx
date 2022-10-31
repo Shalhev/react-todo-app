@@ -39,6 +39,12 @@ function App() {
     return tasks
   }
 
+  const onCompleteTask = (updatedTask) => {
+    updatedTask.isComplete = !updatedTask.isComplete
+    const tasks = taskList.map(task => task.id === updatedTask.id ? updatedTask : task)
+    setTaskList([...tasks])
+  }
+
 
   return (
     <div className="App">
@@ -47,7 +53,7 @@ function App() {
       </header>
       <input type="text" onChange={handleChange} value={newTask} placeholder='Create a new todo..' />
       <button onClick={() => addTask()} >Add</button>
-      <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} />
+      <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
 
       <ul className='clean-list flex justify-center filterby'>
         <li onClick={() => setFilterBy('all')}>All</li>

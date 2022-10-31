@@ -1,6 +1,6 @@
 import { TaskPreview } from './TaskPreview'
 
-export function TaskList({ tasks, onRemoveTask }) {
+export function TaskList({ tasks, onRemoveTask, onCompleteTask }) {
 
     return (
         <div className="task-list">
@@ -9,6 +9,7 @@ export function TaskList({ tasks, onRemoveTask }) {
                     task={task}
                     key={task.id}
                     onRemoveTask={onRemoveTask}
+                    onCompleteTask={onCompleteTask}
                 />)}
         </div>
     )
