@@ -30,7 +30,7 @@ function App() {
   const tasksToShow = () => {
     // console.log('filterBy', filterBy);
     let tasks = taskList
-    if (filterBy === 'complete') {
+    if (filterBy === 'completed') {
       tasks = taskList.filter(task => task.isComplete)
     }
     else if (filterBy === 'active') {
@@ -58,7 +58,7 @@ function App() {
       <ul className='clean-list flex justify-center filterby'>
         <li onClick={() => setFilterBy('all')}>All</li>
         <li onClick={() => setFilterBy('active')}>Active</li>
-        <li onClick={() => setFilterBy('complete')}>Complete</li>
+        <li onClick={() => setFilterBy('completed')}>Completed</li>
       </ul>
 
     </div>
