@@ -69,7 +69,7 @@ function App() {
         <li onClick={() => setFilterBy('active')}>Active</li>
         <li onClick={() => setFilterBy('completed')}>Completed</li>
       </ul>
-      <p onClick={() => onClearTasks()}>Clear Completed</p>
+      <p className='flex auto-center' onClick={() => onClearTasks()}>Clear Completed</p>
 
     </div>
   );

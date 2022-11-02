@@ -1,4 +1,11 @@
 .task-list{
     max-width: 500px;
     margin: 0 auto;
+    background-color: hsl(235, 24%, 19%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    p{
+        text-align: center;
+    }
 }

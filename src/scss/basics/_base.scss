@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,7 +9,6 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     min-height: 100vh;
     color: white;
     font-size: 18px;
@@ -79,27 +79,44 @@ input {
         margin: 0 auto;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        font-size: 14px;
 
         li {
-            padding: 5px;
+            margin: 5px;
+            color: hsl(236, 9%, 61%);
+            font-weight: 500;
+
+            &:hover {
+                cursor: pointer;
+                color: hsl(233, 14%, 35%);
+            }
         }
     }
 
     .add-todo-container {
-        background-color: hsl(235, 24%, 19%);
         margin: 0 auto;
         border-radius: 5px;
         display: flex;
         padding: 15px;
         margin-bottom: 15px;
         width: 500px;
-        
-        input {
+        background-color: white;
+
+        &.isDark {
             background-color: hsl(235, 24%, 19%);
+        }
+
+        input {
             border: none;
             outline: none;
             font-size: 18px;
-            color: aliceblue;
+            color: hsl(235, 19%, 35%);
+            font-weight: 400;
+            width: 100%;
+
+            &.isDark {
+                background-color: hsl(235, 24%, 19%);
+            }
         }
     }
 }
