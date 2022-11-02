@@ -1,23 +1,28 @@
 .task-preview {
+    position: relative;
     background-color: hsl(235, 24%, 19%);
     padding: 15px;
+    display: flex;
+    justify-content: flex-start;
 
-    &:not(:last-of-type) {
-        border-bottom: 1px solid hsla(234, 39%, 85%, 0.258);
-    }
+    border-bottom: 1px solid hsla(234, 39%, 85%, 0.258);
+
 
     &:first-of-type {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
 
-    &:last-of-type {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-
     .complete {
         text-decoration: line-through;
+    }
+    .remove-task{
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+    }
+    input{
+        margin-right: 15px;
     }
 
     // .round {

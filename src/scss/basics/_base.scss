@@ -6,9 +6,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    background-color: #282c34;
     min-height: 100vh;
     color: white;
+    font-size: 18px;
 
 }
 
@@ -52,9 +52,13 @@ input {
     background-repeat: no-repeat;
     background-size: auto;
     background-image: url('../../../public/images/bg-mobile-light.jpg');
+    height: 100vh;
+    background-color: hsl(236, 33%, 92%);
+    
 
     &.isDark {
         background-image: url('../../../public/images/bg-mobile-dark.jpg');
+        background-color: hsl(235, 21%, 11%);
 
         @media only screen and (min-width: 375px) {
             background-image: url('../../../public/images/bg-desktop-dark.jpg');
@@ -68,6 +72,12 @@ input {
     }
 
     .filterby {
+        background-color: hsl(235, 24%, 19%);
+        width: 500px;
+        margin: 0 auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
         li {
             padding: 5px;
         }
