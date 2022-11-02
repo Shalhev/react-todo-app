@@ -73,12 +73,17 @@ input {
 
     }
 
-    .filterby {
-        background-color: hsl(235, 24%, 19%);
+    .list-container {
         width: 500px;
         margin: 0 auto;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px 0px #0000003d;
+        background-color: hsl(235, 24%, 19%);
+    }
+
+    .filterby {
+        width: 500px;
+        margin: 0 auto;
         font-size: 14px;
 
         li {

@@ -58,18 +58,21 @@ function App() {
       <header className="App-header">
         <AppHeader />
       </header>
+
       <form className="add-todo-container" onSubmit={addTask}>
         <input type="text" onChange={handleChange} value={newTask} placeholder='Create a new todo..' />
       </form>
 
-      <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
+      <div className="list-container">
+        <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
 
-      <ul className='clean-list flex justify-center filterby'>
-        <li onClick={() => setFilterBy('all')}>All</li>
-        <li onClick={() => setFilterBy('active')}>Active</li>
-        <li onClick={() => setFilterBy('completed')}>Completed</li>
-      </ul>
-      <p className='flex auto-center' onClick={() => onClearTasks()}>Clear Completed</p>
+        <ul className='clean-list flex justify-center filterby'>
+          <li onClick={() => setFilterBy('all')}>All</li>
+          <li onClick={() => setFilterBy('active')}>Active</li>
+          <li onClick={() => setFilterBy('completed')}>Completed</li>
+        </ul>
+        <p className='flex auto-center' onClick={() => onClearTasks()}>Clear Completed</p>
+      </div>
 
     </div>
   );
