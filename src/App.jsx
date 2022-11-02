@@ -45,6 +45,11 @@ function App() {
     setTaskList([...tasks])
   }
 
+  const onClearTasks = () => {
+    const tasks = taskList.filter(task => task.isComplete === false)
+    setTaskList([...tasks])
+  }
+
 
   return (
     <div className="App">
@@ -60,6 +65,7 @@ function App() {
         <li onClick={() => setFilterBy('active')}>Active</li>
         <li onClick={() => setFilterBy('completed')}>Completed</li>
       </ul>
+      <p onClick={()=> onClearTasks()}>Clear Completed</p>
 
     </div>
   );
