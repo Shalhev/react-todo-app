@@ -52,14 +52,16 @@ input {
     background-repeat: no-repeat;
     background-size: auto;
     background-image: url('../../../public/images/bg-mobile-light.jpg');
+
     &.isDark {
         background-image: url('../../../public/images/bg-mobile-dark.jpg');
+
         @media only screen and (min-width: 375px) {
             background-image: url('../../../public/images/bg-desktop-dark.jpg');
 
         }
     }
-    
+
     @media only screen and (min-width: 375px) {
         background-image: url('../../../public/images/bg-desktop-light.jpg');
 
