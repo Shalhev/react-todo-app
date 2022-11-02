@@ -13,7 +13,8 @@ function App() {
     setNewTask(target.value)
   }
 
-  const addTask = () => {
+  const addTask = (e) => {
+    e.preventDefault();
     if (!newTask) return
     const task = {
       id: Date.now(),
@@ -57,8 +58,10 @@ function App() {
       <header className="App-header">
         <AppHeader />
       </header>
-      <input type="text" onChange={handleChange} value={newTask} placeholder='Create a new todo..' />
-      <button onClick={() => addTask()} >Add</button>
+      <form className="add-todo-container" onSubmit={addTask}>
+        <input type="text" onChange={handleChange} value={newTask} placeholder='Create a new todo..' />
+      </form>
+
       <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
 
       <ul className='clean-list flex justify-center filterby'>

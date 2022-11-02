@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -45,7 +48,6 @@ a {
 
 input {
     font-family: inherit;
-    text-align: inherit;
 }
 
 .App {
@@ -54,7 +56,7 @@ input {
     background-image: url('../../../public/images/bg-mobile-light.jpg');
     height: 100vh;
     background-color: hsl(236, 33%, 92%);
-    
+
 
     &.isDark {
         background-image: url('../../../public/images/bg-mobile-dark.jpg');
@@ -80,6 +82,24 @@ input {
 
         li {
             padding: 5px;
+        }
+    }
+
+    .add-todo-container {
+        background-color: hsl(235, 24%, 19%);
+        margin: 0 auto;
+        border-radius: 5px;
+        display: flex;
+        padding: 15px;
+        margin-bottom: 15px;
+        width: 500px;
+        
+        input {
+            background-color: hsl(235, 24%, 19%);
+            border: none;
+            outline: none;
+            font-size: 18px;
+            color: aliceblue;
         }
     }
 }
