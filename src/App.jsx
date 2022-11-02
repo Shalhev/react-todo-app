@@ -66,12 +66,15 @@ function App() {
       <div className="list-container">
         <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
 
-        <ul className='clean-list flex justify-center filterby'>
-          <li onClick={() => setFilterBy('all')}>All</li>
-          <li onClick={() => setFilterBy('active')}>Active</li>
-          <li onClick={() => setFilterBy('completed')}>Completed</li>
-        </ul>
-        <p className='flex auto-center' onClick={() => onClearTasks()}>Clear Completed</p>
+        <footer>
+          <div className="items-left">5 items left</div>
+          <ul className='clean-list filterby'>
+            <li onClick={() => setFilterBy('all')}>All</li>
+            <li onClick={() => setFilterBy('active')}>Active</li>
+            <li onClick={() => setFilterBy('completed')}>Completed</li>
+          </ul>
+          <p className='clear-btn' onClick={() => onClearTasks()}>Clear Completed</p>
+        </footer>
       </div>
 
     </div>

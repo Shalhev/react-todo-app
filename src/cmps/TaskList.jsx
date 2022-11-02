@@ -11,7 +11,7 @@ export function TaskList({ tasks, onRemoveTask, onCompleteTask }) {
                     onRemoveTask={onRemoveTask}
                     onCompleteTask={onCompleteTask}
                 />)}
-            <p>{!tasks.length ? 'No tasks' : ''}</p>
+            <p className='no-tasks'>{!tasks.length ? 'No tasks' : ''}</p>
         </div>
     )
 }
