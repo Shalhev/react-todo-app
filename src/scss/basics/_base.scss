@@ -9,6 +9,7 @@ body {
     background-color: #282c34;
     min-height: 100vh;
     color: white;
+
 }
 
 .App-header {
@@ -48,6 +49,22 @@ input {
 }
 
 .App {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('../../../public/images/bg-mobile-light.jpg');
+    &.isDark {
+        background-image: url('../../../public/images/bg-mobile-dark.jpg');
+        @media only screen and (min-width: 375px) {
+            background-image: url('../../../public/images/bg-desktop-dark.jpg');
+
+        }
+    }
+    
+    @media only screen and (min-width: 375px) {
+        background-image: url('../../../public/images/bg-desktop-light.jpg');
+
+    }
+
     .filterby {
         li {
             padding: 5px;

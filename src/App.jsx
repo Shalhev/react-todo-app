@@ -7,6 +7,7 @@ function App() {
   const [taskList, setTaskList] = useState([])
   const [newTask, setNewTask] = useState('');
   const [filterBy, setFilterBy] = useState('all');
+  const [isDark, setIsDark] = useState(false);
 
   const handleChange = ({ target }) => {
     setNewTask(target.value)
@@ -65,7 +66,7 @@ function App() {
         <li onClick={() => setFilterBy('active')}>Active</li>
         <li onClick={() => setFilterBy('completed')}>Completed</li>
       </ul>
-      <p onClick={()=> onClearTasks()}>Clear Completed</p>
+      <p onClick={() => onClearTasks()}>Clear Completed</p>
 
     </div>
   );
