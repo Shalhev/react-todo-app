@@ -9,6 +9,10 @@ function App() {
   const [filterBy, setFilterBy] = useState('all');
   const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    document.body.className = theme
+  }, [theme])
+
   const handleChange = ({ target }) => {
     setNewTask(target.value)
   }
@@ -54,13 +58,12 @@ function App() {
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
-    document.body.className = theme
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <AppHeader toggleTheme={toggleTheme}/>
+        <AppHeader toggleTheme={toggleTheme} />
       </header>
 
       <form className="add-todo-container" onSubmit={addTask}>

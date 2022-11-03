@@ -13,6 +13,23 @@ body {
     color: white;
     font-size: 18px;
 
+    // Light Theme
+    --bg-color: hsl(0, 0%, 98%);
+    --bg-img-desktop: url('../../../public/images/bg-desktop-light.jpg');
+    --bg-img-mobile: url('../../../public/images/bg-mobile-light.jpg');
+    --todo-bg-color: #fff;
+    --text-color: hsl(235, 19%, 35%);
+
+
+    // Dark Theme
+    &.dark {
+        --bg-color: hsl(235, 21%, 11%);
+        --bg-img-desktop: url('../../../public/images/bg-desktop-dark.jpg');
+        --bg-img-mobile: url('../../../public/images/bg-mobile-dark.jpg');
+        --todo-bg-color: hsl(235, 24%, 19%);
+        --text-color: hsl(234, 39%, 85%);
+    }
+
 }
 
 .App-header {
@@ -53,23 +70,13 @@ input {
 .App {
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../../../public/images/bg-mobile-light.jpg');
+    background-image: var(--bg-img-mobile);
     min-height: 100vh;
-    background-color: hsl(236, 33%, 92%);
-
-
-    &.isDark {
-        background-image: url('../../../public/images/bg-mobile-dark.jpg');
-        background-color: hsl(235, 21%, 11%);
-
-        @media only screen and (min-width: 375px) {
-            background-image: url('../../../public/images/bg-desktop-dark.jpg');
-
-        }
-    }
+    background-color: var(--bg-color);
 
     @media only screen and (min-width: 375px) {
-        background-image: url('../../../public/images/bg-desktop-light.jpg');
+        background-image: var(--bg-img-desktop);
+
 
     }
 
@@ -78,13 +85,9 @@ input {
         margin: 0 auto;
         border-radius: 5px;
         box-shadow: 0px 0px 30px 0px #0000003d;
-        background-color: white;
-        color: hsl(235, 19%, 35%);
+        background-color: var(--todo-bg-color);
+        color: var(--text-color);
 
-        &.isDark {
-            color: white;
-            background-color: hsl(235, 24%, 19%);
-        }
     }
 
     footer {
@@ -95,13 +98,12 @@ input {
         align-items: center;
         margin: 0px 15px;
 
-        .clear-btn{
+        .clear-btn {
             text-align: right;
         }
     }
 
     .filterby {
-        // width: 500px;
         margin: 0 auto;
         display: flex;
 
@@ -124,23 +126,17 @@ input {
         padding: 15px;
         margin-bottom: 15px;
         width: 500px;
-        background-color: white;
-
-        &.isDark {
-            background-color: hsl(235, 24%, 19%);
-        }
+        background-color: var(--todo-bg-color);
 
         input {
             border: none;
             outline: none;
             font-size: 18px;
-            color: hsl(235, 19%, 35%);
+            color: var(--text-color);
             font-weight: 400;
             width: 100%;
+            background-color: transparent;
 
-            &.isDark {
-                background-color: hsl(235, 24%, 19%);
-            }
         }
     }
 }
