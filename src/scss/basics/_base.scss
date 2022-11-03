@@ -15,6 +15,7 @@ body {
 
     // Light Theme
     --bg-color: hsl(0, 0%, 98%);
+    --theme-icon: url('../../../public/images/icon-moon.svg');
     --bg-img-desktop: url('../../../public/images/bg-desktop-light.jpg');
     --bg-img-mobile: url('../../../public/images/bg-mobile-light.jpg');
     --todo-bg-color: #fff;
@@ -24,6 +25,7 @@ body {
     // Dark Theme
     &.dark {
         --bg-color: hsl(235, 21%, 11%);
+        --theme-icon: url('../../../public/images/icon-sun.svg');
         --bg-img-desktop: url('../../../public/images/bg-desktop-dark.jpg');
         --bg-img-mobile: url('../../../public/images/bg-mobile-dark.jpg');
         --todo-bg-color: hsl(235, 24%, 19%);

@@ -1,12 +1,19 @@
 .app-header {
     width: 500px;
     padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
 
     .logo {
         font-weight: 700;
         font-size: 40px;
         letter-spacing: 20px;
+    }
+    .theme-btn{
+        background-image: var(--theme-icon);
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        width: 25px;
+        height: 26px;
+        cursor: pointer;
     }
 }
