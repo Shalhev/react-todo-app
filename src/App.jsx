@@ -1,5 +1,5 @@
 import './scss/styles.scss'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AppHeader } from './cmps/AppHeader';
 import { TaskList } from './cmps/TaskList'
 
@@ -7,7 +7,7 @@ function App() {
   const [taskList, setTaskList] = useState([])
   const [newTask, setNewTask] = useState('');
   const [filterBy, setFilterBy] = useState('all');
-  const [isDark, setIsDark] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   const handleChange = ({ target }) => {
     setNewTask(target.value)
@@ -52,11 +52,15 @@ function App() {
     setTaskList([...tasks])
   }
 
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+    document.body.className = theme
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <AppHeader />
+        <AppHeader toggleTheme={toggleTheme}/>
       </header>
 
       <form className="add-todo-container" onSubmit={addTask}>
