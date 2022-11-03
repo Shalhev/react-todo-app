@@ -74,7 +74,7 @@ function App() {
         <TaskList tasks={tasksToShow()} onRemoveTask={onRemoveTask} onCompleteTask={onCompleteTask} />
 
         <footer>
-          <div className="items-left">5 items left</div>
+          <div className="items-left">{taskList.filter(task => !task.isComplete).length} items left</div>
           <ul className='clean-list filterby'>
             <li onClick={() => setFilterBy('all')}>All</li>
             <li onClick={() => setFilterBy('active')}>Active</li>
