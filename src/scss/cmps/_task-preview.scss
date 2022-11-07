@@ -15,31 +15,30 @@
         width: 25px;
         height: 25px;
         margin-right: 15px;
-        
+        border: 1px solid hsla(0, 0%, 67%, 0.411);
+
         &:hover {
             cursor: pointer;
             background: linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-
+            border: none;
         }
 
-    }
-
-    .circle {
-        position: absolute;
-        border-radius: 50%;
-        border: 1px solid hsla(0, 0%, 67%, 0.411);
-        width: 24px;
-        height: 24px;
-        background-color: var(--todo-bg-color);
 
 
-    }
-    
-    .check {
-        background-image: url('../../../public/images/icon-check.svg'), linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-        background-repeat: no-repeat;
-        background-position: center;
-        border: none;
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            width: 23px;
+            height: 23px;
+            background-color: var(--todo-bg-color);
+        }
+
+        .check {
+            background-image: url('../../../public/images/icon-check.svg'), linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
     }
 
 
