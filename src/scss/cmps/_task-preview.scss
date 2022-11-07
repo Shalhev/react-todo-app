@@ -23,6 +23,11 @@
             border: none;
         }
 
+        &.check {
+            border: none;
+            background: linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        }
+
 
 
         .circle {
@@ -31,13 +36,12 @@
             width: 23px;
             height: 23px;
             background-color: var(--todo-bg-color);
-        }
 
-        .check {
-            background-image: url('../../../public/images/icon-check.svg'), linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-            background-repeat: no-repeat;
-            background-position: center;
-
+            &.check {
+                background-image: url('../../../public/images/icon-check.svg'), linear-gradient(140deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
     }
 

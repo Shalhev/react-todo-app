@@ -1,7 +1,8 @@
 export function TaskPreview({ task, onRemoveTask, onCompleteTask }) {
     return (
         <div className="task-preview" >
-            <div className="outter-circle flex auto-center">
+            {/* <div className={`outter-circle flex auto-center} ${task.isComplete ? 'active' : 'asd'}` > */}
+            <div className={`outter-circle flex auto-center ${task.isComplete ? "check" : ""}`}>
                 {/* <input type="checkbox" id="checkbox" defaultChecked={task.isComplete} onChange={() => onCompleteTask(task)} /> */}
                 <div onClick={() => onCompleteTask(task)} className={task.isComplete ? 'circle check' : 'circle'}></div>
             </div>
