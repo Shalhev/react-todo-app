@@ -20,6 +20,7 @@ body {
     --bg-img-mobile: url('../../../public/images/bg-mobile-light.jpg');
     --todo-bg-color: #fff;
     --text-color: hsl(235, 19%, 35%);
+    --hover-color: hsl(235, 19%, 35%);
 
 
     // Dark Theme
@@ -30,6 +31,8 @@ body {
         --bg-img-mobile: url('../../../public/images/bg-mobile-dark.jpg');
         --todo-bg-color: hsl(235, 24%, 19%);
         --text-color: hsl(234, 39%, 85%);
+        --hover-color: hsl(236, 33%, 92%);
+        
     }
 
 }
@@ -99,10 +102,14 @@ input {
         justify-content: space-around;
         align-items: center;
         margin: 0px 15px;
+        color: hsl(236, 9%, 61%);
 
         .clear-btn {
             text-align: right;
             cursor: pointer;
+            &:hover{
+                color: var(--hover-color);
+            }
         }
     }
 
@@ -117,7 +124,11 @@ input {
 
             &:hover {
                 cursor: pointer;
-                color: hsl(233, 14%, 35%);
+                color: var(--hover-color);
+            }
+
+            &.active {
+                color: hsl(220, 98%, 61%);
             }
         }
     }
@@ -142,4 +153,5 @@ input {
 
         }
     }
+
 }

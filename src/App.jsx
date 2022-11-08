@@ -76,9 +76,9 @@ function App() {
         <footer>
           <div className="items-left">{taskList.filter(task => !task.isComplete).length} items left</div>
           <ul className='clean-list filterby'>
-            <li onClick={() => setFilterBy('all')}>All</li>
-            <li onClick={() => setFilterBy('active')}>Active</li>
-            <li onClick={() => setFilterBy('completed')}>Completed</li>
+            <li onClick={() => setFilterBy('all')} className={filterBy === 'all' ? 'active' : ''}>All</li>
+            <li onClick={() => setFilterBy('active')} className={filterBy === 'active' ? 'active' : ''}>Active</li>
+            <li onClick={() => setFilterBy('completed')} className={filterBy === 'completed' ? 'active' : ''}>Completed</li>
           </ul>
           <p className='clear-btn' onClick={() => onClearTasks()}>Clear Completed</p>
         </footer>
