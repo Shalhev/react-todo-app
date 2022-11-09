@@ -1,7 +1,7 @@
 import './scss/styles.scss'
 import { useEffect, useState } from 'react';
 import { AppHeader } from './cmps/AppHeader';
-import { TaskList } from './cmps/TaskList'
+import { TaskList } from './cmps/TaskList';
 
 function App() {
   const [taskList, setTaskList] = useState([])
